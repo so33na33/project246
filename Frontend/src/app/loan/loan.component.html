@@ -1,0 +1,29 @@
+
+                 
+                  <form #aboutloan="ngForm" (ngSubmit)="Addloan()">
+                      <div class="mb-6">
+                       <label for="exampleInputText" class="form-label"><b>LoanId:</b></label>
+                        <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="loanid" [(ngModel)]="loan.loanid">
+                      </div>
+                 
+                      <div class="mb-3">
+                          <label for="exampleInputText" class="form-label"><b>LoanName:</b></label>
+                          <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="loanName" [(ngModel)]="loan.loanName">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputText" class="form-label"><b>LoanPlan:</b></label>
+                          <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="LoanPlan" [(ngModel)]="loan.loanPlan">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputText" class="form-label"><b>Amount:</b></label>
+                          <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="amount" [(ngModel)]="loan.amount">
+                        </div>  
+                        <div class="mb-3">
+                          <label for="exampleInputText" class="form-label"><b>Interest:</b></label>
+                          <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="Interest" [(ngModel)]="loan.interest">
+                        </div>                   
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                
+                    </form>
+        
