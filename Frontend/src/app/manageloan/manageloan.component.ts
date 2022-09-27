@@ -17,12 +17,12 @@ export class ManageloanComponent implements OnInit {
   }
 
   constructor(private api:ApiService) {
-    api.viewuser().subscribe
-    {
+    api.viewloan().subscribe(
+    
       (response:any)=>{
         this.data=response
       }
-    }
+      )
    }
 
   ngOnInit(): void {
@@ -35,7 +35,7 @@ export class ManageloanComponent implements OnInit {
 
 Deleteloan(datas:any){
   this.api.deleteloan(datas._id).subscribe(
-    (data:any)=>{
+    (data)=>{
       console.log(data);
       this.data=this.data.filter((u:any)=>u!==datas)
     }
@@ -49,7 +49,7 @@ Deleteloan(datas:any){
 Updateloan(i:any){
   console.log()
   this.api.updateloan(i).subscribe(
-    (data:any)=>{
+    (data)=>{
       console.log(data)
       window.location.reload()
     }

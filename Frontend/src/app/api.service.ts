@@ -24,7 +24,6 @@ export class ApiService {
 
   //admin
 
-
   addadmin=(admin:any)=>{
     return this.http.post<any>("http://localhost:3000/loginadmin",admin)
 
@@ -33,6 +32,9 @@ export class ApiService {
 
   //loan
 
+  viewloan=()=>{
+    return this.http.get<any>("https://localhost:3000/manage")
+  }
 addloan=(loan:any)=>{
   return this.http.post<any>("http://localhost:3000/addloan",loan)
 }

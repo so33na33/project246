@@ -101,7 +101,7 @@ app.delete('/delete/:id',function(req,res){
 //loan details
 
 
-app.get("/home",(req,res)=>{
+app.get("/manage",(req,res)=>{
     loan.find(
         (error,data)=>{
             if(error){
